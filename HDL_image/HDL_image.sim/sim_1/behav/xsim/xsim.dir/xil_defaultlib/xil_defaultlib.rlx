@@ -1,0 +1,11 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/TKLL/HDL_image/HDL_image.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/control_unit.v,1760641128,verilog,,C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/coordinate_mapper.v,,control_unit,,,,,,,,
+C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/coordinate_mapper.v,1760637697,verilog,,C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/memory_interface.v,,coordinate_mapper,,,,,,,,
+C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/memory_interface.v,1760642739,verilog,,C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/pixel_writer.v,,memory_interface,,,,,,,,
+C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/pixel_writer.v,1760514009,verilog,,C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/top_module.v,,pixel_writer,,,,,,,,
+C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/top_module.v,1760642739,verilog,,C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/top_module_tb.v,,top_module,,,,,,,,
+C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/top_module_tb.v,1760644446,verilog,,,,top_module_tb,,,,,,,,
