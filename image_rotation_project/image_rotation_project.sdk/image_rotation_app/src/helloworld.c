@@ -1,0 +1,626 @@
+/******************************************************************************
+*
+* Copyright (C) 2009 - 2014 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* Use of the Software is limited solely to applications:
+* (a) running on a Xilinx device, or
+* (b) that interact with a Xilinx device through a bus or interconnect.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+
+/*
+ * helloworld.c: simple test application
+ *
+ * This application configures UART 16550 to baud rate 9600.
+ * PS7 UART (Zynq) is not initialized by this application, since
+ * bootrom/bsp configures it to baud rate 115200
+ *
+ * ------------------------------------------------
+ * | UART TYPE   BAUD RATE                        |
+ * ------------------------------------------------
+ *   uartns550   9600
+ *   uartlite    Configurable only in HW design
+ *   ps7_uart    115200 (configured by bootrom/bsp)
+ */
+
+//#include <stdio.h>
+//#include "platform.h"
+//#include "xil_printf.h"
+//#include "xil_io.h"
+//#include "xparameters.h"
+//#include "xaxidma.h"
+//#include "xil_cache.h"
+//
+///* DEFINE */
+//#define AXI_BASE XPAR_AXI_IP_0_S00_AXI_BASEADDR
+//
+//#define REG_CTRL   (AXI_BASE + 0x00)  // slv_reg0
+//#define REG_MODE   (AXI_BASE + 0x04)  // slv_reg1
+//#define REG_STATUS (AXI_BASE + 0x08)  // slv_reg2
+//
+//#define DMA_DEV_ID     XPAR_AXIDMA_0_DEVICE_ID
+//#define TX_BUFFER_BASE 0x01000000   // DDR safe region
+//#define MAX_PKT_LEN    64            // bytes
+//
+///* GLOBAL */
+//XAxiDma AxiDma;
+//u32 *TxBufferPtr = (u32 *)TX_BUFFER_BASE;
+//
+///* FUNCTION */
+//int init_dma() {
+//    XAxiDma_Config *CfgPtr;
+//
+//    CfgPtr = XAxiDma_LookupConfig(DMA_DEV_ID);
+//    if (!CfgPtr) return XST_FAILURE;
+//
+//    if (XAxiDma_CfgInitialize(&AxiDma, CfgPtr) != XST_SUCCESS)
+//        return XST_FAILURE;
+//
+//    if (XAxiDma_HasSg(&AxiDma)) {
+//        xil_printf("DMA configured as SG\n");
+//        return XST_FAILURE;
+//    }
+//
+//    return XST_SUCCESS;
+//}
+//
+//int dma_send() {
+//    int i;
+//
+//    for (i = 0; i < MAX_PKT_LEN/4; i++)
+//        TxBufferPtr[i] = i;   // test pattern
+//
+//    Xil_DCacheFlushRange((UINTPTR)TxBufferPtr, MAX_PKT_LEN);
+//
+//    return XAxiDma_SimpleTransfer(
+//        &AxiDma,
+//        (UINTPTR)TxBufferPtr,
+//        MAX_PKT_LEN,
+//        XAXIDMA_DMA_TO_DEVICE
+//    );
+//}
+//
+//
+//int main()
+//{
+////    print("Image Rotation AXI Demo\n\r");
+////
+////    // chọn mode
+////    Xil_Out32(REG_MODE, 0x1);   // mirror demo
+////
+////    // start = 1
+////    Xil_Out32(REG_CTRL, 0x1);
+////    for (int i = 0; i < 8; i++) {
+////            xil_printf("Pixel %d -> %d\r\n", i, i + 20);
+////        }
+////
+////    // đợi
+////    for (volatile int i = 0; i < 1000000; i++);
+////
+////    // stop
+////    Xil_Out32(REG_CTRL, 0x0);
+////
+////    print("Done\n\r");
+////    return 0;
+//
+//	xil_printf("AXI DMA Stream Test\r\n");
+//
+//	    if (init_dma() != XST_SUCCESS) {
+//	        xil_printf("DMA init failed\r\n");
+//	        return -1;
+//	    }
+//
+//	    xil_printf("Sending stream...\r\n");
+//	    dma_send();
+//
+//	    while (XAxiDma_Busy(&AxiDma, XAXIDMA_DMA_TO_DEVICE));
+//
+//	    xil_printf("Done!\r\n");
+//	    return 0;
+//
+//}
+
+#include <stdio.h>
+#include "platform.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xil_io.h"
+#include "sleep.h"
+
+// AXI IP Base Address (change this to match your actual address)
+#define AXI_IP_BASEADDR     XPAR_AXI_IP_0_S00_AXI_BASEADDR
+
+// Register offsets
+#define REG_CONTROL         0x00  // Control register: [1]=done, [0]=start
+#define REG_MODE            0x04  // Mode register: [1:0]=mode
+#define REG_RESERVED1       0x08  // Reserved
+#define REG_RESERVED2       0x0C  // Reserved
+
+// Mode definitions
+#define MODE_PASS           0
+#define MODE_MIRROR         1
+#define MODE_ROTATE_90      2
+#define MODE_ROTATE_180     3
+
+// Image parameters
+#define IMG_WIDTH           16
+#define IMG_HEIGHT          16
+#define IMG_SIZE            (IMG_WIDTH * IMG_HEIGHT)
+
+// BRAM base address (change to your actual BRAM address)
+#define BRAM_BASEADDR       XPAR_BRAM_0_BASEADDR  // Example address
+
+// Test image buffers
+u8 input_image[IMG_SIZE];
+u8 output_image[IMG_SIZE];
+
+//=============================================================================
+// AXI IP Control Functions
+//=============================================================================
+
+void axi_ip_start(u32 mode) {
+    // Clear any previous done status first
+    u32 status = Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+    if (status & 0x02) {
+        xil_printf("Clearing previous done flag...\r\n");
+    }
+
+    // Set mode
+    Xil_Out32(AXI_IP_BASEADDR + REG_MODE, mode);
+    usleep(10);  // Small delay for mode to settle
+
+    // Set start bit (this will auto-clear done bit in hardware)
+    Xil_Out32(AXI_IP_BASEADDR + REG_CONTROL, 0x01);
+    usleep(10);  // Give hardware time to latch the start signal
+
+    xil_printf("Started processing with mode %d\r\n", mode);
+}
+
+u32 axi_ip_is_done(void) {
+    u32 status = Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+    return (status & 0x02) >> 1;  // Check done bit
+}
+
+void axi_ip_wait_done(void) {
+    xil_printf("Waiting for completion...");
+
+    u32 timeout = 10000000;  // Increased timeout
+    u32 count = 0;
+
+    // Small initial delay to let hardware start
+    usleep(100);
+
+    while (!axi_ip_is_done() && timeout > 0) {
+        timeout--;
+        count++;
+        if (count % 100000 == 0) {
+            xil_printf(".");
+            // Debug: print status periodically
+            if (count % 500000 == 0) {
+                u32 status = Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+                xil_printf("[0x%02X]", status);
+            }
+        }
+    }
+
+    if (timeout == 0) {
+        xil_printf("\r\nERROR: Timeout waiting for done!\r\n");
+        u32 control = Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+        xil_printf("  Final Control Register: 0x%08X\r\n", control);
+        xil_printf("  Start bit: %d\r\n", control & 0x01);
+        xil_printf("  Done bit:  %d\r\n", (control & 0x02) >> 1);
+    } else {
+        xil_printf(" Done!\r\n");
+        xil_printf("  Completed in %d iterations\r\n", 10000000 - timeout);
+    }
+}
+
+u32 axi_ip_get_status(void) {
+    return Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+}
+
+//=============================================================================
+// BRAM Access Functions
+//=============================================================================
+
+void write_bram(u32 addr, u8 data) {
+    Xil_Out32(BRAM_BASEADDR + (addr * 4), (u32)data);
+}
+
+u8 read_bram(u32 addr) {
+    return (u8)(Xil_In32(BRAM_BASEADDR + (addr * 4)) & 0xFF);
+}
+
+void load_image_to_bram(u8* image) {
+    for (int i = 0; i < IMG_SIZE; i++) {
+        write_bram(i, image[i]);
+    }
+    xil_printf("Image loaded to BRAM (%d pixels)\r\n", IMG_SIZE);
+}
+
+void read_image_from_bram(u8* image) {
+    for (int i = 0; i < IMG_SIZE; i++) {
+        image[i] = read_bram(i);
+    }
+}
+
+//=============================================================================
+// Test Pattern Generation
+//=============================================================================
+
+void create_test_pattern(u8* image) {
+    for (int i = 0; i < IMG_SIZE; i++) {
+        image[i] = (u8)i;  // Sequential pattern
+    }
+}
+
+void create_checkerboard(u8* image) {
+    for (int y = 0; y < IMG_HEIGHT; y++) {
+        for (int x = 0; x < IMG_WIDTH; x++) {
+            int idx = y * IMG_WIDTH + x;
+            image[idx] = ((x + y) % 2) ? 0xFF : 0x00;
+        }
+    }
+}
+
+void create_gradient(u8* image) {
+    for (int y = 0; y < IMG_HEIGHT; y++) {
+        for (int x = 0; x < IMG_WIDTH; x++) {
+            int idx = y * IMG_WIDTH + x;
+            image[idx] = x * 16;  // Horizontal gradient
+        }
+    }
+}
+
+void create_cross(u8* image) {
+    // Fill with black
+    for (int i = 0; i < IMG_SIZE; i++) {
+        image[i] = 0x00;
+    }
+
+    // Draw white cross
+    for (int i = 0; i < IMG_WIDTH; i++) {
+        image[IMG_HEIGHT/2 * IMG_WIDTH + i] = 0xFF;
+        image[i * IMG_WIDTH + IMG_WIDTH/2] = 0xFF;
+    }
+}
+
+//=============================================================================
+// Image Display Functions
+//=============================================================================
+
+void print_image_compact(const char* title, u8* image) {
+    xil_printf("\r\n%s:\r\n", title);
+
+    // Print first 4 rows
+    for (int y = 0; y < 4; y++) {
+        xil_printf("  ");
+        for (int x = 0; x < IMG_WIDTH; x++) {
+            int idx = y * IMG_WIDTH + x;
+            xil_printf("%02x ", image[idx]);
+        }
+        xil_printf("\r\n");
+    }
+    xil_printf("  ...\r\n");
+
+    // Print last 2 rows
+    for (int y = IMG_HEIGHT-2; y < IMG_HEIGHT; y++) {
+        xil_printf("  ");
+        for (int x = 0; x < IMG_WIDTH; x++) {
+            int idx = y * IMG_WIDTH + x;
+            xil_printf("%02x ", image[idx]);
+        }
+        xil_printf("\r\n");
+    }
+}
+
+void print_corners(u8* image) {
+    xil_printf("\r\nCorner pixels:\r\n");
+    xil_printf("  Top-Left     [0,0]:    0x%02X\r\n", image[0]);
+    xil_printf("  Top-Right    [15,0]:   0x%02X\r\n", image[15]);
+    xil_printf("  Bottom-Left  [0,15]:   0x%02X\r\n", image[240]);
+    xil_printf("  Bottom-Right [15,15]:  0x%02X\r\n", image[255]);
+}
+
+//=============================================================================
+// Test Functions
+//=============================================================================
+
+void test_single_mode(u32 mode) {
+    const char* mode_names[] = {
+        "Pass-through",
+        "Mirror Horizontal",
+        "Rotate 90 CW",
+        "Rotate 180"
+    };
+
+    xil_printf("\r\n========================================\r\n");
+    xil_printf("Testing: %s (Mode %d)\r\n", mode_names[mode], mode);
+    xil_printf("========================================\r\n");
+
+    // Show input
+    print_image_compact("Input Image", input_image);
+
+    // Load to BRAM
+    load_image_to_bram(input_image);
+
+    // Start processing
+    axi_ip_start(mode);
+
+    // Wait for completion
+    axi_ip_wait_done();
+
+    // Read output
+    read_image_from_bram(output_image);
+
+    // Display results
+    print_image_compact("Output Image", output_image);
+    print_corners(output_image);
+
+    xil_printf("\r\nPress any key to continue...\r\n");
+}
+
+//=============================================================================
+// Interactive Menu
+//=============================================================================
+
+void print_menu(void) {
+    xil_printf("\r\n");
+    xil_printf("========================================\r\n");
+    xil_printf("  Image Rotation Test Menu\r\n");
+    xil_printf("========================================\r\n");
+    xil_printf("Pattern Selection:\r\n");
+    xil_printf("  a. Sequential Pattern (0-255)\r\n");
+    xil_printf("  b. Checkerboard\r\n");
+    xil_printf("  c. Gradient\r\n");
+    xil_printf("  d. Cross\r\n");
+    xil_printf("\r\n");
+    xil_printf("Mode Selection:\r\n");
+    xil_printf("  0. Pass-through\r\n");
+    xil_printf("  1. Mirror Horizontal\r\n");
+    xil_printf("  2. Rotate 90 CW\r\n");
+    xil_printf("  3. Rotate 180\r\n");
+    xil_printf("\r\n");
+    xil_printf("Special Commands:\r\n");
+    xil_printf("  s. Show Status\r\n");
+    xil_printf("  t. Test Register Access\r\n");
+    xil_printf("  v. View Current Image\r\n");
+    xil_printf("  r. Reset IP\r\n");
+    xil_printf("  q. Quit\r\n");
+    xil_printf("========================================\r\n");
+    xil_printf("Enter choice: ");
+}
+
+void show_status(void) {
+    u32 control = Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+    u32 mode = Xil_In32(AXI_IP_BASEADDR + REG_MODE);
+
+    xil_printf("\r\n--- System Status ---\r\n");
+    xil_printf("Control Register: 0x%08X\r\n", control);
+    xil_printf("  Start bit [0]: %d\r\n", control & 0x01);
+    xil_printf("  Done bit  [1]: %d\r\n", (control & 0x02) >> 1);
+    xil_printf("  Full binary:   0b");
+    for (int i = 31; i >= 0; i--) {
+        xil_printf("%d", (control >> i) & 1);
+        if (i % 8 == 0) xil_printf(" ");
+    }
+    xil_printf("\r\n");
+    xil_printf("Mode Register:    0x%08X\r\n", mode);
+    xil_printf("  Current mode: %d ", mode & 0x03);
+    const char* mode_names[] = {"Pass", "Mirror", "Rot90", "Rot180"};
+    xil_printf("(%s)\r\n", mode_names[mode & 0x03]);
+    xil_printf("--------------------\r\n");
+}
+
+void test_manual_control(void) {
+    xil_printf("\r\n========================================\r\n");
+    xil_printf("Manual Control Test\r\n");
+    xil_printf("========================================\r\n");
+
+    // Test 1: Read initial state
+    xil_printf("\n1. Initial state:\r\n");
+    show_status();
+
+    // Test 2: Manually set start bit WITHOUT auto-clear
+    xil_printf("\n2. Manually setting start bit to 1...\r\n");
+    Xil_Out32(AXI_IP_BASEADDR + REG_CONTROL, 0x01);
+    usleep(10);
+
+    xil_printf("   Checking immediately:\r\n");
+    u32 ctrl1 = Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+    xil_printf("   Control: 0x%08X, Start=%d, Done=%d\r\n",
+               ctrl1, ctrl1 & 0x01, (ctrl1 & 0x02) >> 1);
+
+    // Test 3: Try to manually set done bit (should fail if read-only)
+    xil_printf("\n3. Trying to set done bit manually (should fail)...\r\n");
+    Xil_Out32(AXI_IP_BASEADDR + REG_CONTROL, 0x03);  // Try to set both bits
+    usleep(10);
+    u32 ctrl2 = Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+    xil_printf("   Control: 0x%08X, Start=%d, Done=%d\r\n",
+               ctrl2, ctrl2 & 0x01, (ctrl2 & 0x02) >> 1);
+
+    if (ctrl2 & 0x02) {
+        xil_printf("   ERROR: Done bit can be set by software! (Hardware bug)\r\n");
+    } else {
+        xil_printf("   OK: Done bit is read-only\r\n");
+    }
+
+    // Test 4: Clear and monitor
+    xil_printf("\n4. Clearing all bits...\r\n");
+    Xil_Out32(AXI_IP_BASEADDR + REG_CONTROL, 0x00);
+    usleep(100);
+
+    xil_printf("\n5. Final state:\r\n");
+    show_status();
+
+    xil_printf("\n6. Testing if hardware ever sets done bit:\r\n");
+    xil_printf("   Setting mode=0, start=1...\r\n");
+    Xil_Out32(AXI_IP_BASEADDR + REG_MODE, 0);
+    Xil_Out32(AXI_IP_BASEADDR + REG_CONTROL, 0x01);
+
+    xil_printf("   Monitoring for 2 seconds...\r\n");
+    for (int i = 0; i < 20; i++) {
+        usleep(100000);  // 100ms
+        u32 status = Xil_In32(AXI_IP_BASEADDR + REG_CONTROL);
+        xil_printf("   [%2d] Ctrl=0x%02X Start=%d Done=%d\r\n",
+                   i, status, status & 0x01, (status & 0x02) >> 1);
+
+        if (status & 0x02) {
+            xil_printf("   >>> DONE BIT DETECTED AT %d00ms!\r\n", i);
+            break;
+        }
+    }
+}
+
+void reset_ip(void) {
+    xil_printf("\r\nResetting IP...\r\n");
+    Xil_Out32(AXI_IP_BASEADDR + REG_CONTROL, 0x00);
+    Xil_Out32(AXI_IP_BASEADDR + REG_MODE, 0x00);
+    usleep(1000);
+    xil_printf("IP Reset complete\r\n");
+}
+
+//=============================================================================
+// Main Function
+//=============================================================================
+
+int main()
+{
+    init_platform();
+
+    xil_printf("\r\n\r\n");
+    xil_printf("*********************************************\r\n");
+    xil_printf("*  AXI IP Image Rotation Test Application  *\r\n");
+    xil_printf("*********************************************\r\n");
+    xil_printf("\r\n");
+
+    xil_printf("System Information:\r\n");
+    xil_printf("  AXI IP Base:  0x%08X\r\n", AXI_IP_BASEADDR);
+    xil_printf("  BRAM Base:    0x%08X\r\n", BRAM_BASEADDR);
+    xil_printf("  Image Size:   %dx%d = %d pixels\r\n",
+               IMG_WIDTH, IMG_HEIGHT, IMG_SIZE);
+
+    // Initialize with sequential pattern
+    create_test_pattern(input_image);
+    xil_printf("\r\nInitialized with Sequential pattern\r\n");
+
+    // Reset IP
+    reset_ip();
+
+    // Main loop
+    char choice;
+    int running = 1;
+
+    while(running) {
+        print_menu();
+
+        // Get user input (wait for UART input)
+        choice = inbyte();  // Read one character from UART
+        xil_printf("%c\r\n", choice);
+
+        switch(choice) {
+            case 'a':
+            case 'A':
+                xil_printf("Creating Sequential pattern...\r\n");
+                create_test_pattern(input_image);
+                print_image_compact("New Pattern", input_image);
+                break;
+
+            case 'b':
+            case 'B':
+                xil_printf("Creating Checkerboard pattern...\r\n");
+                create_checkerboard(input_image);
+                print_image_compact("New Pattern", input_image);
+                break;
+
+            case 'c':
+            case 'C':
+                xil_printf("Creating Gradient pattern...\r\n");
+                create_gradient(input_image);
+                print_image_compact("New Pattern", input_image);
+                break;
+
+            case 'd':
+            case 'D':
+                xil_printf("Creating Cross pattern...\r\n");
+                create_cross(input_image);
+                print_image_compact("New Pattern", input_image);
+                break;
+
+            case '0':
+                test_single_mode(MODE_PASS);
+                break;
+
+            case '1':
+                test_single_mode(MODE_MIRROR);
+                break;
+
+            case '2':
+                test_single_mode(MODE_ROTATE_90);
+                break;
+
+            case '3':
+                test_single_mode(MODE_ROTATE_180);
+                break;
+
+            case 's':
+            case 'S':
+                show_status();
+                break;
+
+            case 't':
+            case 'T':
+                test_manual_control();
+                break;
+
+            case 'v':
+            case 'V':
+                print_image_compact("Current Input Image", input_image);
+                break;
+
+            case 'r':
+            case 'R':
+                reset_ip();
+                break;
+
+            case 'q':
+            case 'Q':
+                xil_printf("\r\nExiting...\r\n");
+                running = 0;
+                break;
+
+            default:
+                xil_printf("Invalid choice! Please try again.\r\n");
+                break;
+        }
+    }
+
+    xil_printf("\r\n*********************************************\r\n");
+    xil_printf("*  Program Terminated                       *\r\n");
+    xil_printf("*********************************************\r\n");
+
+    cleanup_platform();
+    return 0;
+}

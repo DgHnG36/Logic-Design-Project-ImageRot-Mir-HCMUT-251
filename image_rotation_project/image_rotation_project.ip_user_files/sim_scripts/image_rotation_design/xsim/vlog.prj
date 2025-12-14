@@ -1,0 +1,17 @@
+verilog xil_defaultlib --include "../../../../image_rotation_project.srcs/sources_1/bd/image_rotation_design/ipshared/ec67/hdl" --include "../../../../image_rotation_project.srcs/sources_1/bd/image_rotation_design/ipshared/70cf/hdl" --include "../../../../image_rotation_project.srcs/sources_1/bd/image_rotation_design/ip/image_rotation_design_processing_system7_0_0" \
+"../../../bd/image_rotation_design/ipshared/88b4/hdl/axi_ip_v1_0_S00_AXI.v" \
+"../../../bd/image_rotation_design/ipshared/88b4/hdl/axi_ip_v1_0_M00_AXIS.v" \
+"../../../bd/image_rotation_design/ipshared/88b4/hdl/axi_ip_v1_0.v" \
+"../../../bd/image_rotation_design/ip/image_rotation_design_axi_ip_0_0/sim/image_rotation_design_axi_ip_0_0.v" \
+"../../../bd/image_rotation_design/ip/image_rotation_design_processing_system7_0_0/sim/image_rotation_design_processing_system7_0_0.v" \
+"../../../bd/image_rotation_design/ip/image_rotation_design_xbar_0/sim/image_rotation_design_xbar_0.v" \
+"../../../bd/image_rotation_design/ip/image_rotation_design_blk_mem_gen_0_1/sim/image_rotation_design_blk_mem_gen_0_1.v" \
+"../../../bd/image_rotation_design/sim/image_rotation_design.v" \
+"../../../bd/image_rotation_design/ip/image_rotation_design_auto_pc_3/sim/image_rotation_design_auto_pc_3.v" \
+"../../../bd/image_rotation_design/ip/image_rotation_design_auto_pc_0/sim/image_rotation_design_auto_pc_0.v" \
+"../../../bd/image_rotation_design/ip/image_rotation_design_auto_pc_1/sim/image_rotation_design_auto_pc_1.v" \
+"../../../bd/image_rotation_design/ip/image_rotation_design_auto_pc_2/sim/image_rotation_design_auto_pc_2.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
