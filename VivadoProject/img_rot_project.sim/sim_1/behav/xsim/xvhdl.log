@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/SingleDGH/ComputerEngineering/VivadoProject/img_rot_project.ip_user_files/bd/img_rot_design/ip/img_rot_design_proc_sys_reset_0_0/sim/img_rot_design_proc_sys_reset_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'img_rot_design_proc_sys_reset_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/SingleDGH/ComputerEngineering/VivadoProject/img_rot_project.ip_user_files/bd/img_rot_design/ip/img_rot_design_axi_dma_0_0/sim/img_rot_design_axi_dma_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'img_rot_design_axi_dma_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/SingleDGH/ComputerEngineering/VivadoProject/img_rot_project.ip_user_files/bd/img_rot_design/ip/img_rot_design_axi_gpio_0_0/sim/img_rot_design_axi_gpio_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'img_rot_design_axi_gpio_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/SingleDGH/ComputerEngineering/VivadoProject/img_rot_project.ip_user_files/bd/img_rot_design/ip/img_rot_design_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_4939_psr_aclk_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bd_4939_psr_aclk_0'
