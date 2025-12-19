@@ -1,1 +1,0 @@
--wto "62d539932943439db92712e921e45add" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "xilinx_vip" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "tb_axi_image_rotator_behav" "xil_defaultlib.tb_axi_image_rotator" "xil_defaultlib.glbl" -log "elaborate.log" 

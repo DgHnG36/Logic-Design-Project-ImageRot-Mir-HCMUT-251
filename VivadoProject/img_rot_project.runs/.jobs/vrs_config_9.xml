@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="img_rot_design_axi_image_rotator_0_0_synth_1" LaunchDir="D:/SingleDGH/ComputerEngineering/VivadoProject/img_rot_project.runs/img_rot_design_axi_image_rotator_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Parameters>
-		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
-	</Parameters>
-</Runs>
-
