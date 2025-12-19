@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../bd/image_rotator_design/ip/image_rotator_design_axi_dma_0_0/sim/image_rotator_design_axi_dma_0_0.vhd" \
+"../../../bd/image_rotator_design/ip/image_rotator_design_proc_sys_reset_0_0/sim/image_rotator_design_proc_sys_reset_0_0.vhd" \
+"../../../bd/image_rotator_design/ip/image_rotator_design_axi_gpio_0_0/sim/image_rotator_design_axi_gpio_0_0.vhd" \
+"../../../bd/image_rotator_design/ip/image_rotator_design_smartconnect_0_0/bd_0/ip/ip_1/sim/bd_e485_psr_aclk_0.vhd" \
+
+nosort

@@ -1,0 +1,142 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec 19 19:05:32 2025
+| Host         : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'image_rotator_design_axi_image_rotator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of image_rotator_design_axi_image_rotator_0_0 (xilinx.com:user:axi_image_rotator:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec 19 19:04:22 2025
+| Host         : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'image_rotator_design_axi_image_rotator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of image_rotator_design_axi_image_rotator_0_0 (xilinx.com:user:axi_image_rotator:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec 19 18:19:47 2025
+| Host         : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'image_rotator_design_axi_image_rotator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of image_rotator_design_axi_image_rotator_0_0 (xilinx.com:user:axi_image_rotator:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec 19 18:17:58 2025
+| Host         : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'image_rotator_design_axi_image_rotator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of image_rotator_design_axi_image_rotator_0_0 (xilinx.com:user:axi_image_rotator:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec 19 17:17:51 2025
+| Host         : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'image_rotator_design_axi_image_rotator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of image_rotator_design_axi_image_rotator_0_0 (xilinx.com:user:axi_image_rotator:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec 19 17:13:07 2025
+| Host         : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'image_rotator_design_axi_image_rotator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of image_rotator_design_axi_image_rotator_0_0 (xilinx.com:user:axi_image_rotator:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Fri Dec 19 17:04:37 2025
+| Host         : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'image_rotator_design_axi_image_rotator_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of image_rotator_design_axi_image_rotator_0_0 (xilinx.com:user:axi_image_rotator:1.0 (Rev. 3)) to Vivado generation flows.
+
