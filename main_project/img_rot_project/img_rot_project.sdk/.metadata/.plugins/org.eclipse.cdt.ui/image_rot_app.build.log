@@ -1,8 +1,8 @@
-19:15:32 **** Incremental Build of configuration Debug for project image_rot_app ****
+15:44:42 **** Incremental Build of configuration Debug for project image_rot_app ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
 
-19:15:32 Build Finished (took 161ms)
+15:44:42 Build Finished (took 170ms)
 

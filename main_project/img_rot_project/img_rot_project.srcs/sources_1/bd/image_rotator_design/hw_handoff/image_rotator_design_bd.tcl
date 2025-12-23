@@ -185,6 +185,10 @@ proc create_root_design { parentCell } {
 
   # Create instance: axi_image_rotator_0, and set properties
   set axi_image_rotator_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:axi_image_rotator:1.0 axi_image_rotator_0 ]
+  set_property -dict [ list \
+   CONFIG.MAX_HEIGHT {128} \
+   CONFIG.MAX_WIDTH {128} \
+ ] $axi_image_rotator_0
 
   # Create instance: proc_sys_reset_0, and set properties
   set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]

@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-  36488	   2328	  40928	  79744	  13780	image_rot_app.elf
+  36528	 264456	 286688	 587672	  8f798	image_rot_app.elf

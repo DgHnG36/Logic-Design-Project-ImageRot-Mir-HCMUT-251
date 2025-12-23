@@ -52,31 +52,29 @@
 #include "xaxidma.h"
 #include "xgpio.h"
 #include "xil_cache.h"
+#include "in_data.h"  // Include input data file
 
-// --- CẤU HÌNH PHẦN CỨNG ---
+/* DEFINES MODE
+ * ROTATE_MODE_CW: 0 -> b'00
+ * ROTATE_MODE_CCW: 1 -> b'01
+ * MIRROR_MODE_H: 2 -> b'10
+ * MIRROR_MODE_V: 3 -> b'11
+ * */
+#define ROTATE_MODE_CW 	0
+#define ROTATE_MODE_CCW 1
+#define MIRROR_MODE_H 	2
+#define MIRROR_MODE_V 	3
+
+/* DEFINES MAX_HEIGHT AND MAX_WIDTH */
+#define MAX_HEIGHT 512				/* CHANGE HERE IF YOU CHANGE HEIGHT LARGER */
+#define MAX_WIDTH  512					/* CHANGE HERE IF YOU CHANGE WIDTH LARGER */
+
+/* HARDWARE CONFIGURATION */
 #define DMA_DEV_ID          XPAR_AXIDMA_0_DEVICE_ID
 #define GPIO_DEV_ID         XPAR_AXI_GPIO_0_DEVICE_ID
-#define MAX_BUFFER_SIZE     (128*128) // Khai báo bộ đệm nhận đủ lớn để an toàn
+#define MAX_BUFFER_SIZE     MAX_HEIGHT * MAX_WIDTH
 
-// --- GIẢ LẬP FILE ẢNH RAW (HEADER + DATA) ---
-// Cấu trúc: [Height 4byte] [Width 4byte] [Data...]
-// Ví dụ: Height=4, Width=4, Data=[1..16]
-// Lưu ý: Zynq là Little Endian, nên số 4 viết là 0x04, 0x00, 0x00, 0x00
-u8 raw_image_file[] __attribute__ ((aligned (32))) = {
-    // --- HEADER (8 Bytes) ---
-    // Byte 0-3: Height = 4
-    0x04, 0x00, 0x00, 0x00,
-    // Byte 4-7: Width = 4
-    0x04, 0x00, 0x00, 0x00,
-
-    // --- PIXEL DATA (Bắt đầu từ byte thứ 8) ---
-    0x01, 0x02, 0x03, 0x04,
-    0x05, 0x06, 0x07, 0x08,
-    0x09, 0x0A, 0x0B, 0x0C,
-    0x0D, 0x0E, 0x0F, 0x10
-};
-
-// Buffer để nhận kết quả về
+/* Buffer to receive results */
 u8 RxBuffer[MAX_BUFFER_SIZE] __attribute__ ((aligned (32)));
 
 XAxiDma AxiDma;
@@ -84,76 +82,113 @@ XGpio Gpio;
 
 int main() {
     init_platform();
-    xil_printf("\r\n--- AUTO-DETECT HEADER TEST ---\r\n");
+    xil_printf("\r\n===== IMAGE ROTATION SDK =====\r\n");
 
-    // 1. KHỞI TẠO DRIVER
+    /* ========================================================
+     * 1. INITIALIZE DRIVERS
+     * ========================================================
+     */
     XGpio_Initialize(&Gpio, GPIO_DEV_ID);
-    XGpio_SetDataDirection(&Gpio, 1, 0x00000000); // Output
-    XGpio_SetDataDirection(&Gpio, 2, 0x00000000); // Output
+    XGpio_SetDataDirection(&Gpio, 1, 0x00000000); 		// Output
+    XGpio_SetDataDirection(&Gpio, 2, 0x00000000); 		// Output
 
     XAxiDma_Config *CfgPtr = XAxiDma_LookupConfig(DMA_DEV_ID);
     XAxiDma_CfgInitialize(&AxiDma, CfgPtr);
     XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
     XAxiDma_IntrDisable(&AxiDma, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DMA_TO_DEVICE);
 
-    // ========================================================
-    // 2. TỰ ĐỘNG ĐỌC KÍCH THƯỚC (QUAN TRỌNG)
-    // ========================================================
+    /* ========================================================
+     * 2. AUTOMATIC SIZE DETECTION (IMPORTANT)
+     * ========================================================
+	 */
+    u32 *header_ptr = (u32 *)raw_image_file;			// Create 32-bit pointer to the beginning of byte array to read integers
 
-    // Tạo con trỏ 32-bit trỏ vào đầu mảng byte để đọc số nguyên
-    u32 *header_ptr = (u32 *)raw_image_file;
+    u32 detected_h = header_ptr[0];						// Read Height (first 4 bytes)
+    u32 detected_w = header_ptr[1];						// Read Width (next 4 bytes)
 
-    // Đọc Height (4 byte đầu) và Width (4 byte sau)
-    u32 detected_h = header_ptr[0];
-    u32 detected_w = header_ptr[1];
 
-    xil_printf("Detected Header: Height = %d, Width = %d\r\n", detected_h, detected_w);
+    /* Print height and width after detected
+     * Format: (height x width)
+     */
+    xil_printf("[>]Detected Header: Height = %d, Width = %d\r\n", detected_h, detected_w);
 
-    // Tính kích thước dữ liệu ảnh thực tế
+    /* Calculate actual image data size(pixels)
+     * pixels = height x width
+     */
     u32 image_data_size = detected_h * detected_w;
 
-    // Kiểm tra an toàn bộ đệm
+    /* Check buffer safety
+     * Avoid buffer overflow or stack overflow
+     */
     if (image_data_size > MAX_BUFFER_SIZE) {
-        xil_printf("Error: Image too big for RxBuffer!\r\n");
+        xil_printf("[x]Error: Image too big for RxBuffer!\r\n");
         return -1;
     }
 
-    // Xác định vị trí bắt đầu của dữ liệu pixel (Bỏ qua 8 byte header)
-    u8 *pixel_data_ptr = (u8 *)(raw_image_file + 8);
+    u8 *pixel_data_ptr = (u8 *)(raw_image_file + 8);	// Determine starting position of pixel data (Skip 8-byte header)
 
-    // ========================================================
-    // 3. CẤU HÌNH VÀ GỬI
-    // ========================================================
+    /* ========================================================
+     * 3. CONFIGURE AND SEND
+     * ========================================================
+     */
 
-    // A. Gửi thông số xuống FPGA qua GPIO
-    u32 mode = 0; // Rotate CW
+    /* Send parameters to FPGA via GPIO
+     * Channel 2: Write rotation/mirror mode (2 bits)
+     *   - 0: Rotate Clockwise (CW)
+     *   - 1: Rotate Counter-Clockwise (CCW)
+     *   - 2: Mirror Horizontal
+     *   - 3: Mirror Vertical
+     * Channel 1: Write image dimensions as 32-bit value
+     *   - Upper 16 bits: Image height
+     *   - Lower 16 bits: Image width
+     */
+    u32 mode = 0; 										// CHANGE MODE HERE
     XGpio_DiscreteWrite(&Gpio, 2, mode);
 
     u32 size_config = (detected_h << 16) | detected_w;
     XGpio_DiscreteWrite(&Gpio, 1, size_config);
 
-    // B. Flush Cache
-    // Flush toàn bộ mảng raw (cả header và data) cho an toàn
+    /* Flush Cache
+     * Ensures data coherency between CPU cache and main memory before DMA transfer.
+     * - Flush raw_image_file: Write CPU cache data (header + pixels) to main memory
+     *   so DMA can read the correct data
+     * - Invalidate RxBuffer: Clear CPU cache for receive buffer to prevent reading
+     *   stale data after DMA writes new data to memory
+     */
     Xil_DCacheFlushRange((UINTPTR)raw_image_file, 8 + image_data_size);
-    // Xóa cache vùng nhận
     Xil_DCacheInvalidateRange((UINTPTR)RxBuffer, image_data_size);
 
-    // C. Kích hoạt DMA
-    // Kênh nhận (S2MM)
-    XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)RxBuffer, image_data_size, XAXIDMA_DEVICE_TO_DMA);
+    /* Activate DMA
+     * Configure and start AXI DMA transfers in both directions:
+     * 1. S2MM (Stream to Memory-Mapped): Receive channel
+     *    - Receives processed image data from FPGA to RxBuffer in DDR memory
+     *    - Transfer size: image_data_size bytes
+     * 2. MM2S (Memory-Mapped to Stream): Send channel
+     *    - Sends pixel data from DDR memory to FPGA for processing
+     *    - Uses pixel_data_ptr which points to pixel data (skips 8-byte header)
+     *    - Transfer size: image_data_size bytes
+     *
+     * NOTE: S2MM must be configured first to be ready before MM2S sends data,
+     *       preventing potential data loss
+     */
+    XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)RxBuffer, image_data_size, XAXIDMA_DEVICE_TO_DMA);			// Receive channel (S2MM)
 
-    // Kênh gửi (MM2S)
-    // CHÚ Ý: Truyền con trỏ pixel_data_ptr (đã cộng 8 byte offset)
-    XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)pixel_data_ptr, image_data_size, XAXIDMA_DMA_TO_DEVICE);
+    XAxiDma_SimpleTransfer(&AxiDma, (UINTPTR)pixel_data_ptr, image_data_size, XAXIDMA_DMA_TO_DEVICE);	// Send channel (MM2S)
 
-    // D. Chờ DMA xong
+    /* Wait for DMA completion
+     * Poll both DMA channels until transfers complete:
+     * - XAXIDMA_DMA_TO_DEVICE: MM2S (send) channel busy flag
+     * - XAXIDMA_DEVICE_TO_DMA: S2MM (receive) channel busy flag
+     * Loop continues while either channel is busy, ensuring both
+     * send and receive operations finish before proceeding
+     */
     while (XAxiDma_Busy(&AxiDma, XAXIDMA_DMA_TO_DEVICE) || XAxiDma_Busy(&AxiDma, XAXIDMA_DEVICE_TO_DMA));
 
-    // ========================================================
-    // 4. KIỂM TRA KẾT QUẢ
-    // ========================================================
-
-    // Xác định kích thước Output (Nếu xoay 90 độ thì hoán đổi H/W)
+    /*  ========================================================
+     *	 4. CHECK RESULTS
+     *	 ========================================================
+     */
+    /* Determine output size (If rotated 90 degrees, swap H/W) */
     int out_h = detected_h;
     int out_w = detected_w;
     if (mode == 0 || mode == 1) { // CW or CCW
@@ -161,9 +196,9 @@ int main() {
         out_w = detected_h;
     }
 
-    xil_printf("--- Output Data (%dx%d) ---\r\n", out_h, out_w);
+    xil_printf("====== Output Data (%dx%d) =====\r\n", out_h, out_w);
 
-    // In lại Cache lần nữa trước khi đọc CPU
+    /* Invalidate cache again before CPU reads */
     Xil_DCacheInvalidateRange((UINTPTR)RxBuffer, image_data_size);
 
     for(int r = 0; r < out_h; r++){
@@ -172,6 +207,8 @@ int main() {
         }
         xil_printf("\r\n");
     }
+
+    xil_printf("===== Done Output Data ======\r\n");
 
     cleanup_platform();
     return 0;

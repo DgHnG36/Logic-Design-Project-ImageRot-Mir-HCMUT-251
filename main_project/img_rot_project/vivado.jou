@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Tue Dec 23 15:35:33 2025
+# Process ID: 25972
+# Current directory: Z:/img_rot_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17692 Z:\img_rot_project\img_rot_project.xpr
+# Log file: Z:/img_rot_project/vivado.log
+# Journal file: Z:/img_rot_project\vivado.jou
+# Running On: DESKTOP-U9UFEVV, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 4, Host memory: 17031 MB
+#-----------------------------------------------------------
+start_gui
+open_project Z:/img_rot_project/img_rot_project.xpr

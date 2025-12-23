@@ -21,7 +21,8 @@ src/helloworld.o src/helloworld.o: ../src/helloworld.c ../src/platform.h \
  ../../image_rot_app_bsp/ps7_cortexa9_0/include/xil_cache.h \
  ../../image_rot_app_bsp/ps7_cortexa9_0/include/xgpio.h \
  ../../image_rot_app_bsp/ps7_cortexa9_0/include/xgpio_l.h \
- ../../image_rot_app_bsp/ps7_cortexa9_0/include/xil_cache.h
+ ../../image_rot_app_bsp/ps7_cortexa9_0/include/xil_cache.h \
+ ../src/in_data.h
 
 ../src/platform.h:
 
@@ -70,3 +71,5 @@ src/helloworld.o src/helloworld.o: ../src/helloworld.c ../src/platform.h \
 ../../image_rot_app_bsp/ps7_cortexa9_0/include/xgpio_l.h:
 
 ../../image_rot_app_bsp/ps7_cortexa9_0/include/xil_cache.h:
+
+../src/in_data.h:

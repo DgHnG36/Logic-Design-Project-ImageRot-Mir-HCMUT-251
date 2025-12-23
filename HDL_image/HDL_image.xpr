@@ -4,7 +4,7 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                   -->
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.   -->
 
-<Project Product="Vivado" Version="7" Minor="65" Path="C:/TKLL/HDL_image/HDL_image.xpr">
+<Project Product="Vivado" Version="7" Minor="65" Path="C:/Users/5490 i7/Downloads/Logic-Design-Project-ImageRot-Mir-HCMUT-251/HDL_image/HDL_image.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="9ddd71c145b346d7ba8c8abf512554a8"/>
@@ -60,7 +60,7 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="arty-z7-20"/>
     <Option Name="FeatureSet" Val="FeatureSet_Classic"/>
-    <Option Name="WTXSimLaunchSim" Val="150"/>
+    <Option Name="WTXSimLaunchSim" Val="162"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -93,7 +93,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/HDLProject/control_unit.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Users/5490 i7/Downloads/HDLProject/control_unit.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDLProject/control_unit.v"/>
           <Attr Name="ImportTime" Val="1759679409"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -102,7 +102,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDLProject/coordinate_mapper.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Users/5490 i7/Downloads/HDLProject/coordinate_mapper.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDLProject/coordinate_mapper.v"/>
           <Attr Name="ImportTime" Val="1759679409"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -111,7 +111,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDLProject/memory_interface.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Users/5490 i7/Downloads/HDLProject/memory_interface.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDLProject/memory_interface.v"/>
           <Attr Name="ImportTime" Val="1759679409"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -120,7 +120,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDLProject/pixel_writer.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Users/5490 i7/Downloads/HDLProject/pixel_writer.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDLProject/pixel_writer.v"/>
           <Attr Name="ImportTime" Val="1759679409"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -129,7 +129,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDLProject/top_module.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Users/5490 i7/Downloads/HDLProject/top_module.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDLProject/top_module.v"/>
           <Attr Name="ImportTime" Val="1759679409"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -138,7 +138,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/HDLProject/top_module_tb.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Users/5490 i7/Downloads/HDLProject/top_module_tb.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../HDLProject/top_module_tb.v"/>
           <Attr Name="ImportTime" Val="1759679409"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -155,7 +155,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/Downloads/Arty-Z7-20-Master.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../Users/5490 i7/Downloads/Arty-Z7-20-Master.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../Arty-Z7-20-Master.xdc"/>
           <Attr Name="ImportTime" Val="1717241109"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -180,6 +180,7 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="xsim.simulate.runtime" Val="10ms"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
@@ -210,7 +211,9 @@
   <Runs Version="1" Minor="21">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
@@ -219,7 +222,9 @@
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

@@ -8,3 +8,524 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+12:28:54 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36488	   2328	  40928	  79744	  13780	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:30:05 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:33:58 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36488	   2328	  40928	  79744	  13780	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:40:07 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36488	  10408	  40928	  87824	  15710	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:41:00 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:42:04 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:278:5: error: expected ';' before 'cleanup_platform'
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+12:42:10 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:278:5: error: expected ';' before 'cleanup_platform'
+     cleanup_platform();
+     ^~~~~~~~~~~~~~~~
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+12:43:43 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36520	  10408	  40928	  87856	  15730	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:43:55 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:44:11 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36516	  10408	  40928	  87852	  1572c	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:52:33 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36516	  10408	  40928	  87852	  1572c	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:53:49 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36516	   2328	  40928	  79772	  1379c	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:55:16 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:55:10: fatal error: in_data.h: No such file or directory
+ #include "in_data.h"  // Include input data file
+          ^~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+12:55:27 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:87:30: error: 'raw_image_file' undeclared (first use in this function)
+     u32 *header_ptr = (u32 *)raw_image_file;
+                              ^~~~~~~~~~~~~~
+../src/helloworld.c:87:30: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+12:55:37 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36516	   2328	  40928	  79772	  1379c	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:56:01 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+12:56:21 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36516	   2328	  40928	  79772	  1379c	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+12:58:29 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	   2328	  40928	  79784	  137a8	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+13:09:22 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	   2328	  40928	  79784	  137a8	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+13:10:17 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	   2328	  40928	  79784	  137a8	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+13:11:18 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	   2328	  40928	  79784	  137a8	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+13:21:01 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	   2408	  40928	  79864	  137f8	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+13:21:06 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+14:04:16 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:69:20: error: expected expression before '=' token
+ #define MAX_HEIGHT = 128    /* CHANGE HERE IF YOU CHANGE HEIGHT LARGER */
+                    ^
+../src/helloworld.c:75:29: note: in expansion of macro 'MAX_HEIGHT'
+ #define MAX_BUFFER_SIZE     MAX_HEIGHT * MAX_WIDTH
+                             ^~~~~~~~~~
+../src/helloworld.c:78:13: note: in expansion of macro 'MAX_BUFFER_SIZE'
+ u8 RxBuffer[MAX_BUFFER_SIZE] __attribute__ ((aligned (32)));
+             ^~~~~~~~~~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:20: error: expected expression before '=' token
+ #define MAX_HEIGHT = 128    /* CHANGE HERE IF YOU CHANGE HEIGHT LARGER */
+                    ^
+../src/helloworld.c:75:29: note: in expansion of macro 'MAX_HEIGHT'
+ #define MAX_BUFFER_SIZE     MAX_HEIGHT * MAX_WIDTH
+                             ^~~~~~~~~~
+../src/helloworld.c:123:27: note: in expansion of macro 'MAX_BUFFER_SIZE'
+     if (image_data_size > MAX_BUFFER_SIZE) {
+                           ^~~~~~~~~~~~~~~
+../src/helloworld.c:159:40: error: 'RxBuffer' undeclared (first use in this function); did you mean 'setbuffer'?
+     Xil_DCacheInvalidateRange((UINTPTR)RxBuffer, image_data_size);
+                                        ^~~~~~~~
+                                        setbuffer
+../src/helloworld.c:159:40: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/subdir.mk:26: src/helloworld.o] Error 1
+14:04:37 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	   2408	  40928	  79864	  137f8	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+14:04:45 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:30:48 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:33:05 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	  18696	  40928	  96152	  17798	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+15:33:15 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:34:21 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:38:58 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	  18696	  40928	  96152	  17798	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+15:39:12 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:43:30 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	 264456	  40928	 341912	  53798	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+15:43:39 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+15:44:36 **** Auto Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../image_rot_app_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: image_rot_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../image_rot_app_bsp/ps7_cortexa9_0/lib -o "image_rot_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: image_rot_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size image_rot_app.elf  |tee "image_rot_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  36528	 264456	 286688	 587672	  8f798	image_rot_app.elf
+'Finished building: image_rot_app.elf.size'
+' '
+15:44:42 **** Incremental Build of configuration Debug for project image_rot_app ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.

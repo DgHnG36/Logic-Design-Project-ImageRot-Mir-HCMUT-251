@@ -1,0 +1,337 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Oct 15 14:18:38 2025
+# Process ID: 37680
+# Current directory: C:/TKLL/HDL_image
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent39184 C:\TKLL\HDL_image\HDL_image.xpr
+# Log file: C:/TKLL/HDL_image/vivado.log
+# Journal file: C:/TKLL/HDL_image\vivado.jou
+# Running On: DESKTOP-U9UFEVV, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 4, Host memory: 17031 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/TKLL/HDL_image/HDL_image.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+source top_module_tb.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim
+launch_simulation
+source top_module_tb.tcl
+close_sim

@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:axi_image_rotator:1.0
-// IP Revision: 7
+// IP Revision: 11
 
 `timescale 1ns/1ps
 

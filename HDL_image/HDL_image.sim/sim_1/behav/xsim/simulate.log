@@ -37,4 +37,4 @@ Estimated mem_out_rotate[2][2] = 03
 Estimated mem_out_rotate[3][0] = 0c
 Estimated mem_out_rotate[3][1] = 08
 Estimated mem_out_rotate[3][2] = 04
-$finish called at time : 155 ns : File "C:/TKLL/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/top_module_tb.v" Line 234
+$finish called at time : 155 ns : File "C:/Users/5490 i7/Downloads/Logic-Design-Project-ImageRot-Mir-HCMUT-251/HDL_image/HDL_image.srcs/sources_1/imports/HDLProject/top_module_tb.v" Line 234
