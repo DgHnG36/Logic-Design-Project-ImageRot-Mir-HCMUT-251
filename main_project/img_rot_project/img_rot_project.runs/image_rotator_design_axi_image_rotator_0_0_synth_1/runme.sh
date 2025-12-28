@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.runs/image_rotator_design_axi_image_rotator_0_0_synth_1'
+HD_PWD='D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.runs/image_rotator_design_axi_image_rotator_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Fri Dec 19 16:56:56 2025
 -- Host        : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.srcs/sources_1/bd/image_rotator_design/ip/image_rotator_design_xbar_1/image_rotator_design_xbar_1_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top image_rotator_design_xbar_1 -prefix
+--               image_rotator_design_xbar_1_ image_rotator_design_xbar_1_sim_netlist.vhdl
 -- Design      : image_rotator_design_xbar_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -72,8 +72,6 @@ entity image_rotator_design_xbar_1_axi_crossbar_v2_1_19_addr_arbiter_sasd is
     \gen_no_arbiter.m_valid_i_reg_1\ : in STD_LOGIC;
     mi_bvalid : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_addr_arbiter_sasd : entity is "axi_crossbar_v2_1_19_addr_arbiter_sasd";
 end image_rotator_design_xbar_1_axi_crossbar_v2_1_19_addr_arbiter_sasd;
 
 architecture STRUCTURE of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_addr_arbiter_sasd is
@@ -1442,8 +1440,6 @@ entity image_rotator_design_xbar_1_axi_crossbar_v2_1_19_decerr_slave is
     \gen_axilite.s_axi_bvalid_i_reg_1\ : in STD_LOGIC;
     aa_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_decerr_slave : entity is "axi_crossbar_v2_1_19_decerr_slave";
 end image_rotator_design_xbar_1_axi_crossbar_v2_1_19_decerr_slave;
 
 architecture STRUCTURE of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_decerr_slave is
@@ -1619,8 +1615,6 @@ entity image_rotator_design_xbar_1_axi_crossbar_v2_1_19_splitter is
     aresetn_d : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_splitter : entity is "axi_crossbar_v2_1_19_splitter";
 end image_rotator_design_xbar_1_axi_crossbar_v2_1_19_splitter;
 
 architecture STRUCTURE of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_splitter is
@@ -1820,8 +1814,6 @@ entity image_rotator_design_xbar_1_axi_register_slice_v2_1_18_axic_register_slic
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_xbar_1_axi_register_slice_v2_1_18_axic_register_slice : entity is "axi_register_slice_v2_1_18_axic_register_slice";
 end image_rotator_design_xbar_1_axi_register_slice_v2_1_18_axic_register_slice;
 
 architecture STRUCTURE of image_rotator_design_xbar_1_axi_register_slice_v2_1_18_axic_register_slice is
@@ -2999,8 +2991,6 @@ entity image_rotator_design_xbar_1_axi_crossbar_v2_1_19_crossbar_sasd is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_crossbar_sasd : entity is "axi_crossbar_v2_1_19_crossbar_sasd";
 end image_rotator_design_xbar_1_axi_crossbar_v2_1_19_crossbar_sasd;
 
 architecture STRUCTURE of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_crossbar_sasd is
@@ -3419,8 +3409,6 @@ entity image_rotator_design_xbar_1_axi_crossbar_v2_1_19_axi_crossbar is
   attribute C_S_AXI_WRITE_ACCEPTANCE of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_axi_crossbar : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_axi_crossbar : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_axi_crossbar : entity is "axi_crossbar_v2_1_19_axi_crossbar";
   attribute P_ADDR_DECODE : integer;
   attribute P_ADDR_DECODE of image_rotator_design_xbar_1_axi_crossbar_v2_1_19_axi_crossbar : entity is 1;
   attribute P_AXI3 : integer;

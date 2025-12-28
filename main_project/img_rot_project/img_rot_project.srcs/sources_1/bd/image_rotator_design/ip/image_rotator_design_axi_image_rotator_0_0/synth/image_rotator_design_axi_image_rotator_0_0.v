@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:axi_image_rotator:1.0
-// IP Revision: 7
+// IP Revision: 22
 
 (* X_CORE_INFO = "axi_image_rotator,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "image_rotator_design_axi_image_rotator_0_0,axi_image_rotator,{}" *)
-(* CORE_GENERATION_INFO = "image_rotator_design_axi_image_rotator_0_0,axi_image_rotator,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi_image_rotator,x_ipVersion=1.0,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=8,MAX_WIDTH=128,MAX_HEIGHT=128}" *)
+(* CORE_GENERATION_INFO = "image_rotator_design_axi_image_rotator_0_0,axi_image_rotator,{x_ipProduct=Vivado 2018.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=axi_image_rotator,x_ipVersion=1.0,x_ipCoreRevision=22,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,DATA_WIDTH=8,MAX_WIDTH=512,MAX_HEIGHT=512}" *)
 (* IP_DEFINITION_SOURCE = "package_project" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module image_rotator_design_axi_image_rotator_0_0 (
@@ -101,8 +101,8 @@ input wire m_axis_tready;
 
   axi_image_rotator #(
     .DATA_WIDTH(8),
-    .MAX_WIDTH(128),
-    .MAX_HEIGHT(128)
+    .MAX_WIDTH(512),
+    .MAX_HEIGHT(512)
   ) inst (
     .aclk(aclk),
     .aresetn(aresetn),

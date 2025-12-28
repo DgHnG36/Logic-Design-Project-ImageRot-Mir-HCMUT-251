@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Fri Dec 19 16:56:43 2025
 -- Host        : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.srcs/sources_1/bd/image_rotator_design/ip/image_rotator_design_proc_sys_reset_0_0/image_rotator_design_proc_sys_reset_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top image_rotator_design_proc_sys_reset_0_0 -prefix
+--               image_rotator_design_proc_sys_reset_0_0_ image_rotator_design_proc_sys_reset_0_0_sim_netlist.vhdl
 -- Design      : image_rotator_design_proc_sys_reset_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity image_rotator_design_proc_sys_reset_0_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_proc_sys_reset_0_0_cdc_sync : entity is "cdc_sync";
 end image_rotator_design_proc_sys_reset_0_0_cdc_sync;
 
 architecture STRUCTURE of image_rotator_design_proc_sys_reset_0_0_cdc_sync is
@@ -235,8 +233,6 @@ entity image_rotator_design_proc_sys_reset_0_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_proc_sys_reset_0_0_upcnt_n : entity is "upcnt_n";
 end image_rotator_design_proc_sys_reset_0_0_upcnt_n;
 
 architecture STRUCTURE of image_rotator_design_proc_sys_reset_0_0_upcnt_n is
@@ -401,8 +397,6 @@ entity image_rotator_design_proc_sys_reset_0_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_proc_sys_reset_0_0_lpf : entity is "lpf";
 end image_rotator_design_proc_sys_reset_0_0_lpf;
 
 architecture STRUCTURE of image_rotator_design_proc_sys_reset_0_0_lpf is
@@ -584,8 +578,6 @@ entity image_rotator_design_proc_sys_reset_0_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_proc_sys_reset_0_0_sequence_psr : entity is "sequence_psr";
 end image_rotator_design_proc_sys_reset_0_0_sequence_psr;
 
 architecture STRUCTURE of image_rotator_design_proc_sys_reset_0_0_sequence_psr is
@@ -924,8 +916,6 @@ entity image_rotator_design_proc_sys_reset_0_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of image_rotator_design_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of image_rotator_design_proc_sys_reset_0_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of image_rotator_design_proc_sys_reset_0_0_proc_sys_reset : entity is "proc_sys_reset";
 end image_rotator_design_proc_sys_reset_0_0_proc_sys_reset;
 
 architecture STRUCTURE of image_rotator_design_proc_sys_reset_0_0_proc_sys_reset is

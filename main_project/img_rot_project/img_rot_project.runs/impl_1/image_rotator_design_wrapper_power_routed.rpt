@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Fri Dec 19 19:09:55 2025
+| Date             : Sun Dec 28 01:08:27 2025
 | Host             : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
 | Command          : report_power -file image_rotator_design_wrapper_power_routed.rpt -pb image_rotator_design_wrapper_power_summary_routed.pb -rpx image_rotator_design_wrapper_power_routed.rpx
 | Design           : image_rotator_design_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.457        |
+| Total On-Chip Power (W)  | 1.477        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.321        |
+| Dynamic (W)              | 1.341        |
 | Device Static (W)        | 0.136        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 68.2         |
-| Junction Temperature (C) | 41.8         |
+| Max Ambient (C)          | 68.0         |
+| Junction Temperature (C) | 42.0         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.024 |        3 |       --- |             --- |
-| Slice Logic              |     0.009 |    16745 |       --- |             --- |
-|   LUT as Logic           |     0.008 |     4605 |     53200 |            8.66 |
+| Slice Logic              |     0.010 |    16833 |       --- |             --- |
+|   LUT as Logic           |     0.009 |     4632 |     53200 |            8.71 |
 |   LUT as Distributed RAM |    <0.001 |     3514 |     17400 |           20.20 |
-|   Register               |    <0.001 |     5861 |    106400 |            5.51 |
-|   CARRY4                 |    <0.001 |      148 |     13300 |            1.11 |
+|   Register               |    <0.001 |     5882 |    106400 |            5.53 |
+|   CARRY4                 |    <0.001 |      153 |     13300 |            1.15 |
 |   LUT as Shift Register  |    <0.001 |      186 |     17400 |            1.07 |
 |   F7/F8 Muxes            |    <0.001 |      384 |     53200 |            0.72 |
 |   Others                 |     0.000 |      583 |       --- |             --- |
-| Signals                  |     0.031 |    10987 |       --- |             --- |
+| Signals                  |     0.050 |    11057 |       --- |             --- |
 | Block RAM                |    <0.001 |        2 |       140 |            1.43 |
 | DSPs                     |    <0.001 |        3 |       220 |            1.36 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.136 |          |           |                 |
-| Total                    |     1.457 |          |           |                 |
+| Total                    |     1.477 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.079 |       0.065 |      0.013 |
+| Vccint    |       1.000 |     0.098 |       0.084 |      0.014 |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -152,12 +152,12 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| image_rotator_design_wrapper |     1.321 |
-|   image_rotator_design_i     |     1.321 |
+| image_rotator_design_wrapper |     1.341 |
+|   image_rotator_design_i     |     1.341 |
 |     axi_dma_0                |     0.006 |
 |       U0                     |     0.006 |
-|     axi_image_rotator_0      |     0.032 |
-|       inst                   |     0.032 |
+|     axi_image_rotator_0      |     0.051 |
+|       inst                   |     0.051 |
 |     processing_system7_0     |     1.257 |
 |       inst                   |     1.257 |
 |     ps7_0_axi_periph         |     0.004 |

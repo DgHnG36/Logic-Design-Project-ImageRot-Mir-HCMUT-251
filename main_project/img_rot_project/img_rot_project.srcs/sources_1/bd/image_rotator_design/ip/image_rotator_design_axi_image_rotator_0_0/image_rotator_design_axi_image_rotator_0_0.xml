@@ -437,11 +437,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 19 12:05:47 UTC 2025</spirit:value>
+            <spirit:value>Sat Dec 27 18:03:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4ecf96a8</spirit:value>
+            <spirit:value>9:5b6ed6d3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -457,11 +457,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 19 12:05:47 UTC 2025</spirit:value>
+            <spirit:value>Sat Dec 27 18:03:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4ecf96a8</spirit:value>
+            <spirit:value>9:5b6ed6d3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -476,11 +476,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 19 12:05:47 UTC 2025</spirit:value>
+            <spirit:value>Sat Dec 27 18:03:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:53812908</spirit:value>
+            <spirit:value>9:609aed34</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -496,11 +496,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 19 12:05:47 UTC 2025</spirit:value>
+            <spirit:value>Sat Dec 27 18:03:57 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:53812908</spirit:value>
+            <spirit:value>9:609aed34</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -514,11 +514,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Fri Dec 19 12:06:19 UTC 2025</spirit:value>
+            <spirit:value>Sat Dec 27 18:04:49 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:4ecf96a8</spirit:value>
+            <spirit:value>9:5b6ed6d3</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -732,12 +732,12 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MAX_WIDTH</spirit:name>
         <spirit:displayName>Max Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MAX_WIDTH">128</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MAX_WIDTH">512</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>MAX_HEIGHT</spirit:name>
         <spirit:displayName>Max Height</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MAX_HEIGHT">128</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MAX_HEIGHT">512</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -752,12 +752,12 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/b6cd/src/defines.v</spirit:name>
+        <spirit:name>../../ipshared/9463/src/defines.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/b6cd/src/axi_image_rotator.v</spirit:name>
+        <spirit:name>../../ipshared/9463/src/axi_image_rotator.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -772,12 +772,12 @@
     <spirit:fileSet>
       <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/b6cd/src/defines.v</spirit:name>
+        <spirit:name>../../ipshared/9463/src/defines.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/b6cd/src/axi_image_rotator.v</spirit:name>
+        <spirit:name>../../ipshared/9463/src/axi_image_rotator.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -836,12 +836,12 @@
     <spirit:parameter>
       <spirit:name>MAX_WIDTH</spirit:name>
       <spirit:displayName>Max Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MAX_WIDTH">128</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MAX_WIDTH">512</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>MAX_HEIGHT</spirit:name>
       <spirit:displayName>Max Height</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MAX_HEIGHT">128</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MAX_HEIGHT">512</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
@@ -852,7 +852,7 @@
     <xilinx:coreExtensions>
       <xilinx:displayName>axi_image_rotator_v1_0</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:coreRevision>22</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@62921cf9_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/ip_repo</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@5df854e9_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/ip_repo</xilinx:tag>
@@ -894,6 +894,121 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@52cb174e_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/ip_repo</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@3b1f8ac5_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/ip_repo</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@33d841c_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f67a02d_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33eb6679_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@570c8c6_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d91bfd_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c64cdd3_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@573c54d_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c2c858d_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e69806a_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e4b6eb8_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d17aa59_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cfab3a6_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@677d39ca_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fb9863c_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27711f60_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd81dd4_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@609c3ec7_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74e1ae53_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2136d84f_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16ed5986_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@528fc1fe_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bf5588b_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e3b260c_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27fb7951_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@409fee53_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43873a93_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c654fc_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3469c00c_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b1ded43_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c748d12_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37a8de72_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1462ef2b_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21180c0f_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26d2103e_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b13d708_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1502422e_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2600c67e_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@484c9dc8_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f692b96_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@752e9429_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@762238fc_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25fdad15_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d7f459_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@530fde49_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56fe48e_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b13ea70_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f65c76a_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@484c716c_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d927117_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66153947_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e3dd267_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f189ed2_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34fb953e_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3940e3c1_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68aa4d4_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a57b0b9_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@451eefb1_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ca912a1_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cc459be_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a651ad6_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49928f84_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7944ead8_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ae060ee_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a68dd41_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@615a3353_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44128e10_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dfcf9eb_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f9dc490_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@be2f74c_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@631b39c1_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b1cb6f8_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ff63524_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68cf4363_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f29e09b_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25f70b11_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b24ba99_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64c09e68_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cf09353_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5caef6b0_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d7a1013_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@271fe58d_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@944a588_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf582da_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3db4023a_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d9c1542_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a3611_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff3a612_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4400e9c7_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1783a391_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33d376e3_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15e2714c_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ebfa522_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cf3530_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@725e68a4_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a97be9c_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@fa012df_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ac26a55_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dcf76f7_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46929111_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3950dd62_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79ae7f2_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36a2fc84_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@628c76f3_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4667982a_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb5532_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ddef835_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a8d4a18_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fbe5865_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@308f3ddc_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c047c9_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c2a42fd_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7251c536_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bd93c10_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24388465_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d1605f5_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@503f750a_ARCHIVE_LOCATION">d:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
@@ -918,13 +1033,15 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.MAX_HEIGHT" xilinx:valueSource="user"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.MAX_WIDTH" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="0e9c48ee"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="f27912c2"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="222a2382"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2de7866b"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="9bef704c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="a320f1c9"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="026a9866"/>

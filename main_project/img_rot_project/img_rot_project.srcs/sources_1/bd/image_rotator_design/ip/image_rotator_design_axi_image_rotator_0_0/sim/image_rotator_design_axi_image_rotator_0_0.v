@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:user:axi_image_rotator:1.0
-// IP Revision: 7
+// IP Revision: 22
 
 `timescale 1ns/1ps
 
@@ -100,8 +100,8 @@ input wire m_axis_tready;
 
   axi_image_rotator #(
     .DATA_WIDTH(8),
-    .MAX_WIDTH(128),
-    .MAX_HEIGHT(128)
+    .MAX_WIDTH(512),
+    .MAX_HEIGHT(512)
   ) inst (
     .aclk(aclk),
     .aresetn(aresetn),

@@ -60,30 +60,32 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param synth.incrementalSynthesisCache C:/Users/LENOVO/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-8400-LAPTOP-DHS056N6/incrSyn
   set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg400-1
   set_property board_part digilentinc.com:arty-z7-20:part0:1.1 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir D:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.cache/wt [current_project]
-  set_property parent.project_path D:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.xpr [current_project]
-  set_property ip_repo_paths d:/SingleDGH/ComputerEngineering/ip_repo [current_project]
+  set_property webtalk.parent_dir D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.cache/wt [current_project]
+  set_property parent.project_path D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.xpr [current_project]
+  set_property ip_repo_paths D:/SingleDGH/ComputerEngineering/LogicDesign/ip_repo [current_project]
   update_ip_catalog
-  set_property ip_output_repo D:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.cache/ip [current_project]
+  set_property ip_output_repo D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
-  add_files -quiet D:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.runs/synth_1/image_rotator_design_wrapper.dcp
+  add_files -quiet D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.runs/synth_1/image_rotator_design_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.srcs/sources_1/bd/image_rotator_design/image_rotator_design.bd
+  add_files D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.srcs/sources_1/bd/image_rotator_design/image_rotator_design.bd
   set_param project.isImplRun false
-  read_xdc D:/SingleDGH/ComputerEngineering/digilent-xdc-master/digilent-xdc-master/Arty-Z7-20-Master.xdc
+  read_xdc D:/SingleDGH/ComputerEngineering/LogicDesign/src_templates/digilent-xdc-master/digilent-xdc-master/Arty-Z7-20-Master.xdc
   set_param project.isImplRun true
   link_design -top image_rotator_design_wrapper -part xc7z020clg400-1
   set_param project.isImplRun false

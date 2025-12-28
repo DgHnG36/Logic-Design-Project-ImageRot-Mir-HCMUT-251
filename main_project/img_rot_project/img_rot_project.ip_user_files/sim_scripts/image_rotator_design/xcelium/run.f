@@ -28,7 +28,7 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/image_rotator_design/ip/image_rotator_design_processing_system7_0_0/sim/image_rotator_design_processing_system7_0_0.v" \
-  "../../../bd/image_rotator_design/ipshared/b6cd/src/axi_image_rotator.v" \
+  "../../../bd/image_rotator_design/ipshared/9463/src/axi_image_rotator.v" \
   "../../../bd/image_rotator_design/ip/image_rotator_design_axi_image_rotator_0_0/sim/image_rotator_design_axi_image_rotator_0_0.v" \
 -endlib
 -makelib xcelium_lib/lib_pkg_v1_0_2 \

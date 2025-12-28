@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 // Date        : Fri Dec 19 16:56:43 2025
 // Host        : LAPTOP-DHS056N6 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/SingleDGH/ComputerEngineering/img_rot_project/img_rot_project.srcs/sources_1/bd/image_rotator_design/ip/image_rotator_design_proc_sys_reset_0_0/image_rotator_design_proc_sys_reset_0_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top image_rotator_design_proc_sys_reset_0_0 -prefix
+//               image_rotator_design_proc_sys_reset_0_0_ image_rotator_design_proc_sys_reset_0_0_stub.v
 // Design      : image_rotator_design_proc_sys_reset_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
