@@ -1,0 +1,7 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.srcs/sources_1/new/defines.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.srcs/sources_1/new/axi_image_rotator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_image_rotator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.srcs/sources_1/new/axi_image_rotator_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_axi_image_rotator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

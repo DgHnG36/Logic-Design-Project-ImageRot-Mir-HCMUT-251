@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>image_rotator_design_wrapper_hw_platform_0_Traces</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.linuxtools.tmf.project.nature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>Traces/Run_Dec-28_10-17/PS_Trace_Dec-28_10-17/PS_Trace_Dec-28_10-17_</name>
+			<type>1</type>
+			<location>D:/SingleDGH/ComputerEngineering/LogicDesign/img_rot_project/img_rot_project.sdk/image_rotator_design_wrapper_hw_platform_0_Traces/Traces/.bookmarks</location>
+		</link>
+	</linkedResources>
+</projectDescription>

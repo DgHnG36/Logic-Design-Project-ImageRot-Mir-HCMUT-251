@@ -1,0 +1,22 @@
+#ifndef IN_DATA_H
+#define IN_DATA_H
+
+#include "xil_types.h"
+
+// --- RAW IMAGE FILE (HEADER + DATA) ---
+// Structure: [Height 4bytes] [Width 4bytes] [Data...]
+// Note: Zynq is Little Endian
+u8 raw_image_file[] __attribute__ ((aligned (32))) = {
+    // --- HEADER (8 Bytes) ---
+    0x05, 0x00, 0x00, 0x00,  // Byte 0-3: Height = 5
+    0x04, 0x00, 0x00, 0x00,  // Byte 4-7: Width = 4
+
+    // --- PIXEL DATA (Starting from byte 8) ---
+    0x01, 0x02, 0x03, 0x04,
+    0x05, 0x06, 0x07, 0x08,
+    0x09, 0x0A, 0x0B, 0x0C,
+    0x0D, 0x0E, 0x0F, 0x10,
+    0x11, 0x12, 0x13, 0x14,
+};
+
+#endif // IN_DATA_H
