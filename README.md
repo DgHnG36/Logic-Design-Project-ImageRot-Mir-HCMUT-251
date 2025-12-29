@@ -1,4 +1,4 @@
-# Logic-Design-Project-ImageRot-Mir-HCMUT-251
+# Image Rotating and Mirroring VHDL and AXI protocol
 
 ![Verilog](https://img.shields.io/badge/Verilog-HDL-blue)
 ![Vivado](https://img.shields.io/badge/Vivado-2018.x-red)
@@ -180,4 +180,5 @@ For questions or issues, please open an issue in the repository or contact the p
 ---
 
 **Project Status**: Active Development | **Last Updated**: December 2025
+
 
