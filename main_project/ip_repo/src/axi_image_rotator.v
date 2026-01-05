@@ -116,15 +116,16 @@ module axi_image_rotator #(
     wire [31:0] total_pixels = img_height * img_width;
     
     /* BRAM BANK SELECTION LOGIC
-     * Extract bank selector (2 MSBs) and bank address (30 LSBs) from both
-     * write pointer and read address. This allows concurrent access to
-     * different banks and efficient memory utilization across 4 BRAM banks.
+     * 4-way bank interleaving using address bits:
+     * - addr[1:0]: bank selector (0-3)
+     * - addr[31:2]: address within selected bank
+     * Enables concurrent access to different banks.
      */
-    wire [1:0] wr_bank_sel = wr_ptr[31:30];
-    wire [29:0] wr_bank_addr = wr_ptr[29:0];
-    
-    wire [1:0] rd_bank_sel = out_addr[31:30];
-    wire [29:0] rd_bank_addr = out_addr[29:0];
+    wire [1:0] wr_bank_sel = wr_ptr[1:0];    // addr[1:0]
+    wire [29:0] wr_bank_addr = wr_ptr >> 2;  // addr[31:2]
+
+    wire [1:0] rd_bank_sel = out_addr[1:0];
+    wire [29:0] rd_bank_addr = out_addr >> 2;
     
     /* WRITE TO BRAM BANK SELECTED 
      * During the RECEIVE state, incoming pixel data is written sequentially
