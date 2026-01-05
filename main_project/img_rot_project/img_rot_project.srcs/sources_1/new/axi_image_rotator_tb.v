@@ -55,7 +55,7 @@ module tb_axi_image_rotator;
      * Size is allocated for maximum possible image dimensions (MAX_WIDTH * MAX_HEIGHT).
      * Data is loaded from file using $readmemh() in hexadecimal format.
      */
-    reg [31:0] buffer_din [0:`MAX_WIDTH*`MAX_HEIGHT-1];
+    reg [31:0] buffer_din [0:`MAX_WIDTH*`MAX_HEIGHT-1 + 2];
     
     integer i;
     integer pixel_count;
@@ -107,6 +107,7 @@ module tb_axi_image_rotator;
                 $fwrite(fout,"%02X\n", m_axis_tdata); 
                 $write("%3d ", m_axis_tdata);
                 if ((pixel_count+1)%tb_dynamic_height==0) $write("\n");
+                //if ((pixel_count+1)%tb_dynamic_width==0) $write("\n");
                 pixel_count = pixel_count + 1;
                 if (m_axis_tlast) begin
                     $display("=== DONE, %s written ===", `OUTPUT_FILE);
