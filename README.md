@@ -17,7 +17,7 @@ This project implements hardware-accelerated image transformation algorithms on 
 - **Image Rotation**: 90° clockwise and 90° counterclockwise rotation
 - **Image Mirroring**: Horizontal and vertical flip operations
 - **Real-time Processing**: Hardware-optimized pipeline for minimal latency
-- **Configurable Resolution**: Supports multiple image dimensions(up to 512x512 pixels)
+- **Configurable Resolution**: Supports multiple image dimensions(up to 512x512 pixels for simulation and 128x128 for synthesis)
 - **Memory Management**: Efficient buffer management using internal BRAM with bank partitioning
 - **Modular Design**: Reusable components for easy integration
 
@@ -180,6 +180,7 @@ For questions or issues, please open an issue in the repository or contact the p
 ---
 
 **Project Status**: Active Development | **Last Updated**: December 2025
+
 
 
 
