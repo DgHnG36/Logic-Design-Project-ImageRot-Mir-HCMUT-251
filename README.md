@@ -25,7 +25,7 @@ This project implements hardware-accelerated image transformation algorithms on 
 
 - **HDL**: Verilog (primary), VHDL compatible
 - **Development Tool**: Xilinx Vivado Design Suite
-- **Target Platform**: Xilinx FPGA (Artiy-Z7-20, Zynq, or similar)
+- **Target Platform**: Xilinx FPGA (Arty-Z7-20, Zynq, or similar)
 - **Scripting**: TCL for automation and build processes
 - **Simulation**: Vivado Simulator / ModelSim
 
@@ -63,7 +63,7 @@ Logic-Design-Project-ImageRot-Mir-HCMUT-251/
 ### Prerequisites
 
 - Xilinx Vivado 2018.3 or later
-- Xilinx FPGA development board (Arty--Z7--20, Basys 3, Nexys A7)
+- Xilinx FPGA development board (Arty-Z7-20, Basys 3, Nexys A7)
 - Basic knowledge of Verilog/VHDL and digital design
 
 ### Installation
@@ -180,5 +180,6 @@ For questions or issues, please open an issue in the repository or contact the p
 ---
 
 **Project Status**: Active Development | **Last Updated**: December 2025
+
 
 
