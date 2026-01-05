@@ -152,7 +152,7 @@ Integrates all submodules and provides external interface for configuration and 
 
 - **Throughput**: 1 pixel per clock cycle
 - **Latency**: ~N cycles (where N = image dimension)
-- **Resource Utilization**: ~8K LUTs, ~5.8K FFs
+- **Resource Utilization**: ~20K LUTs, ~6K FFs
 - **Maximum Frequency**: 100MHz on Arty-Z7-20
 
 ## Testing
@@ -180,6 +180,7 @@ For questions or issues, please open an issue in the repository or contact the p
 ---
 
 **Project Status**: Active Development | **Last Updated**: December 2025
+
 
 
 
